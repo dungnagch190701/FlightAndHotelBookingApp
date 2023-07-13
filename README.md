@@ -1,5 +1,5 @@
 # FlightAndHotelBookingApp
-![image](https://github.com/dungnagch190701/FlightAndHotelBookingApp/assets/87683549/8b169cea-2d28-4254-ba1a-10a492234f8e)
+![image](https://github.com/dungnagch190701/FlightAndHotelBookingApp/assets/87683549/8b169cea-2d28-4254-ba1a-10a492234f8e | width=100)
 ![image](https://github.com/dungnagch190701/FlightAndHotelBookingApp/assets/87683549/2eea3d21-716b-42a9-9950-4562d4d78e80)
 ![image](https://github.com/dungnagch190701/FlightAndHotelBookingApp/assets/87683549/cc94f63a-d117-4b4a-b62b-59063e4d5ea1)
 ![image](https://github.com/dungnagch190701/FlightAndHotelBookingApp/assets/87683549/7f43ca4e-685e-4f0f-9b47-26abb7a7d2a0)
