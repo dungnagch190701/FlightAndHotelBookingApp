@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/round_bottom_sheet"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        />
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_below="@+id/title"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:layout_below="@id/divider"
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RadioButton
+            android:id="@+id/lowest_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lowest price"
+            android:textSize="18dp"
+            />
+
+        <RadioButton
+            android:id="@+id/early_departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earliest departure"
+            android:textSize="18dp"
+            />
+
+        <RadioButton
+            android:id="@+id/last_departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest departure"
+            android:textSize="18dp"
+            />
+
+        <RadioButton
+            android:id="@+id/early_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earliest arrival"
+            android:textSize="18dp"
+            />
+        <RadioButton
+            android:id="@+id/last_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest arrival"
+            android:textSize="18dp"
+            />
+        <RadioButton
+            android:id="@+id/short_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Short duration"
+            android:textSize="18dp"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="close" />
+
+</RelativeLayout>

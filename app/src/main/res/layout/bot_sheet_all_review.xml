@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/material_50"
+    android:id="@+id/all_review_layout">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:navigationIcon="@drawable/ic_baseline_close_24"/>
+    <RelativeLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/guest_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From 1215 guest"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/avg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/guest_number"
+            android:background="@color/primary"
+            android:padding="5dp"
+            android:text="7.9"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+
+
+
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/all_review_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All reviews"
+        android:layout_below="@id/head"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_review_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/all_review_txt"
+        android:background="@color/white"
+        android:padding="10dp"
+        />
+
+
+
+</RelativeLayout>

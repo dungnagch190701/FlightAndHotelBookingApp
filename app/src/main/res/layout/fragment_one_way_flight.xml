@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.OneWayFlightFragment"
+
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/from_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_outline_flight_takeoff_24"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:paddingLeft="10dp" />
+            <TextView
+                android:id="@+id/to"
+                android:layout_below="@id/from_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/to_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_baseline_flight_land_24"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:paddingLeft="10dp" />
+            <TextView
+                android:id="@+id/departure_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to_edt"
+                android:text="Departure Date"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/departure_date_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/departure_date"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/calendar_start_outline"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:paddingLeft="10dp" />
+
+
+
+
+            <TextView
+                android:id="@+id/passenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passengers"
+                android:layout_below="@id/departure_date_edt"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/passenger_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passenger"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_baseline_people_outline_24"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="1 passenger"
+                android:inputType="none"
+                android:paddingLeft="10dp"
+                android:paddingRight="30dp" />
+
+            <TextView
+                android:id="@+id/seat_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/departure_date_edt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="100dp"
+                android:text="Seat Class"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/seat_class_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seat_class"
+                android:layout_alignStart="@+id/seat_class"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/ic_outline_airline_seat_recline_extra_24"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Economy"
+                android:inputType="none"
+                android:paddingLeft="10dp" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seat_class_edt"
+                android:layout_centerInParent="true"
+                android:text="Search"
+                android:textAllCaps="false" />
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/vietjet"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/logo"
+                android:layout_alignBottom="@id/logo"
+                android:layout_toRightOf="@id/logo"
+                android:gravity="center"
+                android:text="Airline" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selected_seat_explain"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/txt_normal"
+                android:background="@drawable/seat_explain_round"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/selected_seat_explain"
+                android:layout_alignBottom="@id/selected_seat_explain"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/selected_seat_explain"
+                android:gravity="center_vertical"
+                android:text="Not available" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/normal_seat_explain"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/title"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/seat_explain_round"
+                android:backgroundTint="#B1B1B1"
+                android:textColor="@color/white"
+                android:layout_marginRight="5dp"
+                />
+            <TextView
+                android:id="@+id/txt_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:layout_toRightOf="@id/normal_seat_explain"
+                android:layout_alignTop="@id/selected_seat_explain"
+                android:layout_alignBottom="@id/selected_seat_explain"
+                android:gravity="center_vertical"
+                android:layout_toEndOf="@id/normal_seat_explain"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/other_seat_explain"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/title"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/txt_selected"
+                android:background="@drawable/seat_explain_round"
+                android:backgroundTint="#EF9A9A"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/selected_seat_explain"
+                android:layout_alignBottom="@id/selected_seat_explain"
+                android:layout_toRightOf="@id/other_seat_explain"
+                android:gravity="center_vertical"
+                android:text="Other Class"
+
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/AB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/normal_seat_explain"
+                android:text="Show seats for: " />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/normal_seat_explain"
+                android:layout_toRightOf="@id/AB"
+                android:text="Economy" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/AB"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerview"/>
+
+
+            <TextView
+                android:id="@+id/total_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:text="Total pay: "
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/total_pay_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$200"
+                android:layout_below="@id/divider"
+                android:layout_toRightOf="@id/total_pay"/>
+
+            <TextView
+                android:id="@+id/txt_seat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_pay"
+                android:text="Your selected seat: " />
+
+            <TextView
+                android:id="@+id/number_seat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_pay"
+                android:layout_toRightOf="@id/txt_seat"
+                android:text="No seat"
+                android:layout_toLeftOf="@+id/continueBtn"
+                />
+
+            <Button
+                android:id="@+id/continueBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="Continue" />
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

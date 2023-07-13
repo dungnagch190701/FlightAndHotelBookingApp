@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HotelDetailActivity"
+    android:id="@+id/detail_layout"
+
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
+
+        <ImageView
+            android:id="@+id/bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_bookmark_border_24"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <include layout="@layout/bottom_hotel"
+        />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="70dp"
+        >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/image"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/indicator"
+            android:clipChildren="false"
+            android:clipToOutline="false"
+            android:clipToPadding="false"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="The Grace Hotel Dalat"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hotel_name"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/airport_code_bg"
+                android:drawableStart="@drawable/ic_baseline_apartment_24"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                 />
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hotel_name"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@id/tag"
+                android:isIndicator="false"
+                android:numStars="5" />
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tag"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/ic_outline_location_on_24"
+                android:text="Ward 1, Dalat" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address"
+                android:text="HN,VN" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_share_24" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/rating_and_review_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_see_all_fac"
+                android:layout_marginTop="20dp"
+                android:text="Rating and Reviews"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tripify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_and_review_title"
+                android:text="Tripify"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/review_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tripify"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_reviews_24" />
+
+            <TextView
+                android:id="@+id/review_avg_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tripify"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/review_icon"
+                android:text="8.8"
+                android:textColor="@color/primary"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/recent_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/review_avg_number"
+                android:text="Recent review"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recent_review" />
+
+            <TextView
+                android:id="@+id/see_all_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/comment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="See All Reviews"
+                android:textAllCaps="true"
+                android:textColor="@color/primary"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/see_all_review"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/fac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description_content"
+                android:layout_marginTop="20dp"
+                android:text="Common Facilities"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_fac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fac"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/text_see_all_fac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/list_fac"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="See all facilities"
+                android:textColor="@color/primary" />
+
+            <TextView
+                android:id="@+id/description_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description_txt"
+                android:text="This is description"
+
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.HomeFragment"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar_home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/no_avatar" />
+
+        <TextView
+            android:id="@+id/hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/avatar_home"
+            android:text="Hi, "
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/head2"
+            android:layout_below="@id/hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's discover a New Adventure!"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            />
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head2"
+            android:layout_marginStart="-20dp"
+            android:layout_marginEnd="-20dp"
+            android:layout_marginBottom="20dp">
+
+
+            <ImageButton
+                android:id="@+id/flight"
+                style="@style/CustomImageButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_rounded"
+                android:src="@drawable/ic_outline_flight_24"
+                app:layout_constraintEnd_toStartOf="@id/hotel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+            <TextView
+                android:id="@+id/flight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+                android:text="Flight"
+
+                app:layout_constraintStart_toStartOf="@id/flight"
+                app:layout_constraintEnd_toEndOf="@id/flight"
+                app:layout_constraintTop_toBottomOf="@+id/flight" />
+
+            <TextView
+                android:id="@+id/hotel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Hotel"
+                app:layout_constraintStart_toStartOf="@id/hotel"
+                app:layout_constraintEnd_toEndOf="@id/hotel"
+                app:layout_constraintTop_toBottomOf="@+id/hotel" />
+
+
+
+            <ImageButton
+                android:id="@+id/hotel"
+                style="@style/CustomImageButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_rounded"
+                android:src="@drawable/ic_outline_hotel_24"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/flight"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/widget"
+            android:text="Top Luxury Hotel"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popular_activities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popular"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+
+            />
+
+        <TextView
+            android:id="@+id/popular2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popular_activities"
+            android:text="Top Rating Hotel"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:textStyle="bold" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popular_activities2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popular2"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+
+            />
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@+id/processBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</FrameLayout>

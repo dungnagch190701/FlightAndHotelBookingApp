@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HotelActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="10dp"
+        >
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/below_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/hotel" />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="Find your Favorite Hotel to stay"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+
+
+            />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/below_toolbar"
+        android:layout_marginTop="-20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+
+            >
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/from_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_baseline_add_location_24"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:paddingLeft="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/check_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from_edt"
+                android:text="Check-in date" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/check_in_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_in"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/calendar_start_outline"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:paddingLeft="10dp" />
+            <TextView
+                android:id="@+id/check_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_in_edt"
+                android:text="Check-out date" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/check_out_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_out"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/calendar_end_outline"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:paddingStart="10dp" />
+            <TextView
+                android:id="@+id/errorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:text="Check-out date must be greater than check-in date"
+                android:layout_below="@id/check_out_edt"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/guest_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/errorTextView"
+                android:text="Add guest(s) &amp; room(s)" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/guest_room_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/guest_room"
+                android:background="@drawable/bg_edt"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_baseline_people_outline_24"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:hint="1 room(s) &amp; 1 guest(s)"
+                android:paddingLeft="10dp" />
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/guest_room_edt"
+                android:text="Search"
+                android:textAllCaps="false" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/recent_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_card_view"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_baseline_history_24"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/primary"
+        android:text="Your Recent Viewed"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recentSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recent_txt"
+        android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recentSearch"
+            android:layout_marginStart="10dp"
+            android:text="Clear All"
+            android:textColor="@color/primary"
+            android:textStyle="bold" />
+
+
+</RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

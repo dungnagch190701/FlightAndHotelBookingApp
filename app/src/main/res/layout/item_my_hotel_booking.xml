@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_hotel_booking"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="10dp"
+        android:layout_margin="10dp"
+        android:clipToOutline="false"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:id="@+id/hotel_card"
+                >
+
+                <ImageView
+                    android:id="@+id/hotel_image"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/hotel_card"
+                android:text="Hotel Name"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hotel_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hotel_name"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/hotel_card"
+                android:text="123 Nguyen Van Cu, Ha Long, Quang Ninh" />
+            <TextView
+                android:id="@+id/hotel_check_in_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check-in date"
+                android:layout_below="@id/hotel_address"
+                android:layout_toRightOf="@id/hotel_card"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/check_in_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hotel_check_in_date"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/hotel_card"
+                android:text="Wed, 23 Apr 2023" />
+            <TextView
+                android:id="@+id/hotel_check_out_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check-out date"
+                android:layout_below="@id/check_in_date"
+                android:layout_toRightOf="@id/hotel_card"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/check_out_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wed, 23 Apr 2023"
+                android:layout_below="@id/hotel_check_out_date"
+                android:layout_toRightOf="@id/hotel_card"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:id="@+id/room_type"
+                android:layout_toRightOf="@id/hotel_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Type"
+                android:layout_below="@id/check_out_date"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/room_type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_type"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/hotel_card"
+                android:text="Single Room" />
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

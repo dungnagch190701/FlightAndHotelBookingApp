@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlightPaymentActivity"
+    android:orientation="vertical"
+    android:background="@color/material_50"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="Payment"
+        app:titleTextColor="@color/white"
+
+        />
+
+    <View
+        android:id="@+id/below"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/primary" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_outline_flight_24" />
+
+            <LinearLayout
+                android:id="@+id/direction_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SGN"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_right_alt_24" />
+
+                <TextView
+                    android:id="@+id/direction2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SGN"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/direction_container"
+                android:layout_centerHorizontal="true"
+                android:text="25 Apirl 2023" />
+
+            <TextView
+                android:id="@+id/passenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date"
+                android:layout_centerHorizontal="true"
+                android:text="1 passenger(s)"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_hotel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_apartment_24"
+                android:drawablePadding="5dp"
+                android:text="Madiuhu Hotel"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/check_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check-in"
+                android:layout_below="@id/hotel_name"
+                />
+            <TextView
+                android:id="@+id/check_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check-out"
+                android:layout_below="@id/check_in"
+                />
+
+            <TextView
+                android:id="@+id/check_in_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hotel_name"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/check_in"
+                android:text="Wed, 3 May 2023" />
+
+            <TextView
+                android:id="@+id/check_out_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_in"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/check_out"
+                android:text="Wed, 3 May 2023" />
+
+            <TextView
+                android:id="@+id/room_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_out"
+                android:background="@color/material_50"
+                android:text="Double Room" />
+
+            <TextView
+                android:id="@+id/guest_per_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_type"
+                android:background="@color/material_50"
+                android:text="2 guest(s) / room" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/select_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select method to payment"
+        android:layout_below="@id/below"
+        android:layout_margin="10dp"
+        />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_below="@id/select_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginBottom="20dp"
+        >
+        <RadioButton
+            android:id="@+id/zalopay"
+            android:padding="5dp"
+            android:button="@android:color/transparent"
+            android:drawableStart="@drawable/zalo"
+            android:text="Pay with Zalo Pay"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:drawablePadding="10dp"
+            android:textColor="@drawable/btn_state_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_state"
+            android:layout_marginBottom="10dp"
+            />
+        <RadioButton
+            android:id="@+id/cash"
+            android:padding="5dp"
+            android:button="@android:color/transparent"
+            android:drawableStart="@drawable/ic_baseline_payments_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay with Cash"
+            android:textSize="20dp"
+            android:textColor="@drawable/btn_state_text_color"
+            android:textStyle="bold"
+            android:drawablePadding="10dp"
+            android:background="@drawable/btn_state"
+
+            />
+    </RadioGroup>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/linear_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vietjac x1"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/priceItem1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="$ 10"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/item2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item1"
+                    android:text="Vietjac x1"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/priceItem2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/priceItem1"
+                    android:layout_alignParentEnd="true"
+                    android:text="$ 10"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/divier"
+                android:layout_below="@id/linear_item"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/total_layout"
+                android:layout_below="@id/divier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="$ 1000"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_zalo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="pay now" />
+
+
+
+</RelativeLayout>

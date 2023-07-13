@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.ConfirmFlightFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_50"
+        >
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:title="Fill in Details"
+                app:titleTextColor="@color/white"
+
+                />
+
+
+        <RelativeLayout
+            android:id="@+id/below"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/primary"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="See product details"
+                android:textColor="@color/white" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title2"
+                android:background="@color/white"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/flight_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_flight_takeoff_24"
+
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:id="@+id/date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/flight_icon"
+                        android:layout_toRightOf="@id/flight_icon"
+                        android:text="Wed, 17 May 2023" />
+
+                    <TextView
+                        android:id="@+id/airline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/flight_icon"
+                        android:text="Vietnam airline" />
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/airline"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/vietjet" />
+
+                    <TextView
+                        android:id="@+id/origin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/flight_icon"
+                        android:layout_alignTop="@id/logo"
+                        android:layout_alignBottom="@id/logo"
+                        android:layout_toRightOf="@id/logo"
+                        android:gravity="center"
+                        android:text="DLI" />
+
+                    <ImageView
+                        android:id="@+id/icon_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/flight_icon"
+                        android:layout_alignTop="@id/logo"
+                        android:layout_alignBottom="@id/logo"
+                        android:layout_toRightOf="@id/origin"
+                        android:src="@drawable/ic_baseline_arrow_right_alt_24" />
+
+                    <TextView
+                        android:id="@+id/destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/flight_icon"
+                        android:layout_alignTop="@id/logo"
+                        android:layout_alignBottom="@id/logo"
+                        android:layout_toRightOf="@id/icon_right"
+                        android:gravity="center"
+                        android:text="HAN" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/logo"
+                        android:text="19:45 - 21:35" />
+
+                    <TextView
+                        android:id="@+id/seatCLass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/time"
+                        android:text="Economy" />
+
+                    <TextView
+                        android:id="@+id/list_seat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seatCLass"
+                        android:text="A6,A8,A9" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Details for E-ticket"
+            android:layout_below="@id/below"
+            android:layout_margin="10dp"
+            />
+        <RelativeLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title3"
+            android:background="@color/white"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/no_avatar" />
+
+            <TextView
+                android:id="@+id/logged"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/avatar"
+                android:text="Logged in as " />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/logged"
+                android:text="Nguyen Anh Dung" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logged"
+                android:layout_toRightOf="@id/avatar"
+                android:text="h4karl@gmail.com" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Traveler Details"
+            android:layout_below="@id/info"
+            android:layout_margin="10dp"
+
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title4"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:layout_marginBottom="30dp"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/list_passenger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/icon_add"
+                style="@style/CustomImageButtonStyle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/list_passenger"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/image_rounded"
+                android:src="@drawable/ic_baseline_add_24" />
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/icon_add"
+                android:layout_alignBottom="@id/icon_add"
+                android:layout_toRightOf="@id/icon_add"
+                android:gravity="center"
+                android:text="Add" />
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_check_24"
+        app:tint="@color/white"
+        android:layout_margin="10dp"
+        android:layout_gravity="end|bottom"
+        />
+
+
+</FrameLayout>

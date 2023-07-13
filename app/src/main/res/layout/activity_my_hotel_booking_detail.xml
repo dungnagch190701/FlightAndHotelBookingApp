@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyHotelBookingDetailActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:title="Hotel Ticket"
+        app:titleTextColor="@color/white" />
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:contentPadding="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/room" />
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@id/image"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+
+                android:layout_toRightOf="@id/tag"
+                android:text="Hotel name"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/airport_code_bg"
+                android:drawableStart="@drawable/ic_baseline_apartment_24"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:text="Hotel" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hotel_name"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="7dp"
+                android:isIndicator="false"
+                android:numStars="5" />
+
+            <TextView
+                android:id="@+id/review_avg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating"
+                android:layout_marginStart="20dp"
+                android:drawableStart="@drawable/ic_baseline_reviews_24"
+                android:drawablePadding="10dp"
+                android:text="2.3"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/review_avg"
+                android:layout_marginStart="20dp"
+                android:text="Address"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address"
+                android:layout_marginStart="20dp"
+                android:text="Cam PHa, Quang Ninh"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/check_in_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_text"
+                android:layout_marginStart="20dp"
+                android:text="Check in date"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/check_in_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_in_date"
+                android:layout_marginStart="20dp"
+                android:text="Wed, 23 Apr 2023"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/check_out_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_in_date_text"
+                android:layout_marginStart="20dp"
+                android:text="Check out date"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/check_out_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_out_date"
+                android:layout_marginStart="20dp"
+                android:text="Wed, 23 Apr 2023"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/room_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_out_date_text"
+                android:layout_marginStart="20dp"
+                android:text="Room Type"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/room_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_type"
+                android:layout_marginStart="20dp"
+                android:text="Single Room"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/total_passenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_type_text"
+                android:layout_marginStart="20dp"
+                android:text="Guest"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/total_passenger_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_passenger"
+                android:layout_marginStart="20dp"
+                android:text="5 guest(s)"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_passenger_text"
+                android:layout_marginEnd="20dp"
+                android:text="Payment"
+                android:layout_alignParentEnd="true"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/payment_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/zalo" />
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_passenger_text"
+                android:layout_marginStart="20dp"
+                android:text="Payment"
+
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/total_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_amount"
+                android:layout_marginStart="20dp"
+                android:text="$ 100"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/reviewBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_icon"
+                android:text="SEND YOUR REVIEW" />
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+  </RelativeLayout>
